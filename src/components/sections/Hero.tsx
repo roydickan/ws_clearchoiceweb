@@ -98,7 +98,7 @@ export function Hero({
               <Button
                 size="lg"
                 variant="outline"
-                className="border-slate-600 text-white hover:bg-slate-800 px-8 py-6 text-lg"
+                className="border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 py-6 text-lg"
                 asChild
               >
                 <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
