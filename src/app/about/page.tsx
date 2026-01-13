@@ -93,8 +93,8 @@ export default function AboutPage() {
                 key={value.title}
                 className="bg-white rounded-xl p-6 shadow-sm"
               >
-                <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-                  <value.icon className="h-6 w-6 text-orange-600" />
+                <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4">
+                  <value.icon className="h-6 w-6 text-red-700" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   {value.title}
@@ -119,7 +119,7 @@ export default function AboutPage() {
                 href={siteConfig.partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-600 hover:text-orange-700 font-medium"
+                className="text-red-700 hover:text-orange-700 font-medium"
               >
                 {siteConfig.partner.name}
               </a>{" "}
@@ -144,7 +144,7 @@ export default function AboutPage() {
             </p>
             <Button
               size="lg"
-              className="bg-orange-500 hover:bg-orange-600"
+              className="bg-red-600 hover:bg-red-700"
               asChild
             >
               <Link href="/contact">

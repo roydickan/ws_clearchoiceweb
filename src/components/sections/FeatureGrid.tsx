@@ -67,8 +67,8 @@ export function FeatureGrid({
                 variants={itemVariants}
                 className="bg-slate-50 rounded-xl p-6 hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-                  <IconComponent className="h-6 w-6 text-orange-600" />
+                <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4">
+                  <IconComponent className="h-6 w-6 text-red-700" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   {feature.title}
@@ -78,7 +78,7 @@ export function FeatureGrid({
                   <ul className="space-y-1">
                     {feature.items.map((item, idx) => (
                       <li key={idx} className="text-sm text-slate-500 flex items-start">
-                        <span className="text-orange-500 mr-2">•</span>
+                        <span className="text-red-600 mr-2">•</span>
                         {item}
                       </li>
                     ))}

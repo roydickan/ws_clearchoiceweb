@@ -218,19 +218,19 @@ export default function ToyotaSupplierDevelopmentPage() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-2xl font-bold text-orange-600 mb-2">Central</div>
+                <div className="text-2xl font-bold text-red-700 mb-2">Central</div>
                 <div className="text-sm text-slate-600">East Coast Distribution</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-2xl font-bold text-orange-600 mb-2">Robust</div>
+                <div className="text-2xl font-bold text-red-700 mb-2">Robust</div>
                 <div className="text-sm text-slate-600">Transportation Networks</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-2xl font-bold text-orange-600 mb-2">Skilled</div>
+                <div className="text-2xl font-bold text-red-700 mb-2">Skilled</div>
                 <div className="text-sm text-slate-600">Manufacturing Workforce</div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-2xl font-bold text-orange-600 mb-2">Supportive</div>
+                <div className="text-2xl font-bold text-red-700 mb-2">Supportive</div>
                 <div className="text-sm text-slate-600">Business Environment</div>
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function ToyotaSupplierDevelopmentPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-600"
+                className="bg-red-600 hover:bg-red-700"
                 asChild
               >
                 <Link href="/contact">

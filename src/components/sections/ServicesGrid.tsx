@@ -62,8 +62,8 @@ export function ServicesGrid() {
               <motion.div key={service.title} variants={itemVariants}>
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300 group">
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4 group-hover:bg-orange-500 transition-colors duration-300">
-                      <Icon className="h-6 w-6 text-orange-600 group-hover:text-white transition-colors duration-300" />
+                    <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4 group-hover:bg-red-600 transition-colors duration-300">
+                      <Icon className="h-6 w-6 text-red-700 group-hover:text-white transition-colors duration-300" />
                     </div>
                     <CardTitle className="text-xl">{service.title}</CardTitle>
                     <CardDescription className="text-base">
@@ -71,7 +71,7 @@ export function ServicesGrid() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button variant="link" className="p-0 h-auto text-orange-600" asChild>
+                    <Button variant="link" className="p-0 h-auto text-red-700" asChild>
                       <Link href={service.href}>
                         Learn More <ArrowRight className="ml-1 h-4 w-4" />
                       </Link>

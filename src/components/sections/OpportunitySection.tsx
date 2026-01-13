@@ -62,11 +62,11 @@ export function OpportunitySection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-orange-300 hover:shadow-md transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center mb-4">
-                <opp.icon className="h-6 w-6 text-orange-600" />
+              <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4">
+                <opp.icon className="h-6 w-6 text-red-700" />
               </div>
               <h3 className="font-semibold text-slate-900 mb-1">{opp.company}</h3>
-              <p className="text-2xl font-bold text-orange-600 mb-2">
+              <p className="text-2xl font-bold text-red-700 mb-2">
                 {opp.investment}
               </p>
               <p className="text-sm text-slate-600">{opp.description}</p>
@@ -92,7 +92,7 @@ export function OpportunitySection() {
           </p>
           <Button
             size="lg"
-            className="bg-orange-500 hover:bg-orange-600 text-white"
+            className="bg-red-600 hover:bg-red-700 text-white"
             asChild
           >
             <Link href="/contact">

@@ -183,19 +183,19 @@ export default function WorkforceDevelopmentPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 mb-2">15+</div>
+                <div className="text-3xl font-bold text-red-600 mb-2">15+</div>
                 <div className="text-sm text-slate-400">Major OEM Partners</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 mb-2">5</div>
+                <div className="text-3xl font-bold text-red-600 mb-2">5</div>
                 <div className="text-sm text-slate-400">University Partners</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 mb-2">100+</div>
+                <div className="text-3xl font-bold text-red-600 mb-2">100+</div>
                 <div className="text-sm text-slate-400">Graduates Placed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-500 mb-2">$50M+</div>
+                <div className="text-3xl font-bold text-red-600 mb-2">$50M+</div>
                 <div className="text-sm text-slate-400">Contracts Secured</div>
               </div>
             </div>

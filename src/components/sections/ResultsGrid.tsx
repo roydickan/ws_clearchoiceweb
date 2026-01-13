@@ -43,7 +43,7 @@ function AnimatedStat({ value, suffix, label }: Result) {
 
   return (
     <div ref={ref} className="text-center p-6 bg-white rounded-xl shadow-sm">
-      <div className="text-4xl font-bold text-orange-600 mb-2">
+      <div className="text-4xl font-bold text-red-700 mb-2">
         {count}
         {suffix}
       </div>

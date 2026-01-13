@@ -50,8 +50,8 @@ export function WhyChooseUs() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-6">
-                <feature.icon className="h-8 w-8 text-orange-600" />
+              <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-6">
+                <feature.icon className="h-8 w-8 text-red-700" />
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 {feature.title}

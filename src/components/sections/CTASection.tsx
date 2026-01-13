@@ -19,7 +19,7 @@ export function CTASection() {
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
       <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
+        className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.2, 0.3, 0.2],
@@ -67,7 +67,7 @@ export function CTASection() {
             <ul className="space-y-2 text-left max-w-md mx-auto">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-300">{benefit}</span>
                 </li>
               ))}
@@ -83,7 +83,7 @@ export function CTASection() {
           >
             <Button
               size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8"
+              className="bg-red-600 hover:bg-red-700 text-white px-8"
               asChild
             >
               <Link href="/contact">
@@ -93,7 +93,7 @@ export function CTASection() {
             </Button>
             <a
               href={`tel:${siteConfig.contact.phone}`}
-              className="flex items-center space-x-2 text-white hover:text-orange-400 transition-colors"
+              className="flex items-center space-x-2 text-white hover:text-red-400 transition-colors"
             >
               <Phone className="h-5 w-5" />
               <span className="font-medium">Call Now: {siteConfig.contact.phone}</span>

@@ -181,15 +181,15 @@ export default function SupplyChainOptimizationPage() {
                 </p>
                 <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-slate-700">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-500">6 mo</div>
+                    <div className="text-3xl font-bold text-red-600">6 mo</div>
                     <div className="text-sm text-slate-400">Production Delays</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-500">$2B</div>
+                    <div className="text-3xl font-bold text-red-600">$2B</div>
                     <div className="text-sm text-slate-400">Lost Revenue</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-500">15%</div>
+                    <div className="text-3xl font-bold text-red-600">15%</div>
                     <div className="text-sm text-slate-400">Market Share Lost</div>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export default function SupplyChainOptimizationPage() {
       />
 
       {/* 10X ROI Guarantee */}
-      <section className="py-16 bg-orange-500">
+      <section className="py-16 bg-red-600">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center text-white">
             <Layers className="h-16 w-16 mx-auto mb-6 opacity-90" />
@@ -230,7 +230,7 @@ export default function SupplyChainOptimizationPage() {
             <Button
               size="lg"
               variant="secondary"
-              className="bg-white text-orange-600 hover:bg-slate-100"
+              className="bg-white text-red-700 hover:bg-slate-100"
               asChild
             >
               <Link href="/contact">

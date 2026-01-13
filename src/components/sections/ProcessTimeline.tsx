@@ -42,7 +42,7 @@ export function ProcessTimeline({ title, subtitle, phases }: ProcessTimelineProp
               )}
 
               {/* Timeline dot */}
-              <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-bold">
+              <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-red-600 flex items-center justify-center text-white text-xs font-bold">
                 {index + 1}
               </div>
 
@@ -52,7 +52,7 @@ export function ProcessTimeline({ title, subtitle, phases }: ProcessTimelineProp
                     {phase.title}
                   </h3>
                   {phase.duration && (
-                    <span className="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-medium rounded">
+                    <span className="px-2 py-0.5 bg-red-100 text-orange-700 text-xs font-medium rounded">
                       {phase.duration}
                     </span>
                   )}
@@ -62,7 +62,7 @@ export function ProcessTimeline({ title, subtitle, phases }: ProcessTimelineProp
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
                     {phase.items.map((item, idx) => (
                       <li key={idx} className="text-sm text-slate-500 flex items-start">
-                        <span className="text-orange-500 mr-2">•</span>
+                        <span className="text-red-600 mr-2">•</span>
                         {item}
                       </li>
                     ))}

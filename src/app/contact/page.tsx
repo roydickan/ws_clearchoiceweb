@@ -57,18 +57,18 @@ export default function ContactPage() {
                     href={`tel:${siteConfig.contact.phone}`}
                     className="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors"
                   >
-                    <Phone className="h-5 w-5 text-orange-500" />
+                    <Phone className="h-5 w-5 text-red-600" />
                     <span>{siteConfig.contact.phone}</span>
                   </a>
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
                     className="flex items-center space-x-3 text-slate-300 hover:text-white transition-colors"
                   >
-                    <Mail className="h-5 w-5 text-orange-500" />
+                    <Mail className="h-5 w-5 text-red-600" />
                     <span>{siteConfig.contact.email}</span>
                   </a>
                   <div className="flex items-center space-x-3 text-slate-300">
-                    <Clock className="h-5 w-5 text-orange-500" />
+                    <Clock className="h-5 w-5 text-red-600" />
                     <span>Mon-Fri: 8:00 AM - 6:00 PM EST</span>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 <ul className="space-y-3">
                   {expectations.map((item, index) => (
                     <li key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
                       <span className="text-slate-600">{item}</span>
                     </li>
                   ))}
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   href={siteConfig.contact.scheduling}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors"
                 >
                   Open Scheduling Calendar
                 </a>

@@ -152,7 +152,7 @@ export function ContactForm() {
       <Button
         type="submit"
         size="lg"
-        className="w-full bg-orange-500 hover:bg-orange-600"
+        className="w-full bg-red-600 hover:bg-red-700"
         disabled={isSubmitting}
       >
         {isSubmitting ? (
