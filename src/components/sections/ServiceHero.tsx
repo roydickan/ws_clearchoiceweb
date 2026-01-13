@@ -11,6 +11,7 @@ interface ServiceHeroProps {
   description: string;
   ctaText?: string;
   ctaHref?: string;
+  backgroundImage?: string;
 }
 
 export function ServiceHero({
@@ -19,10 +20,20 @@ export function ServiceHero({
   description,
   ctaText = "Get Started",
   ctaHref = "/contact",
+  backgroundImage,
 }: ServiceHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image */}
+      {backgroundImage && (
+        <img
+          src={backgroundImage}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-900/90" />
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/50" />
       <motion.div
         className="absolute -top-40 -right-40 w-80 h-80 bg-red-600/10 rounded-full blur-3xl"
         animate={{

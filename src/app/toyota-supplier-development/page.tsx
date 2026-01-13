@@ -160,6 +160,7 @@ export default function ToyotaSupplierDevelopmentPage() {
         subtitle="Toyota Supplier Development"
         description="Clear Choice partners with Strategic Value Plus to transform tier 2 and tier 3 manufacturers into Toyota-ready suppliers. We know what Toyota requires—and we'll get you there."
         ctaText="Start My Toyota Journey"
+        backgroundImage="https://images.pexels.com/photos/3846517/pexels-photo-3846517.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       {/* TBMNC Opportunity */}

@@ -152,6 +152,7 @@ export default function OperationalTransformationPage() {
         subtitle="Operational Transformation"
         description="Toyota's production system revolutionized manufacturing. Now imagine those principles supercharged with real-time data, IoT integration, and AI-driven insights. That's operational transformation."
         ctaText="Transform My Operations"
+        backgroundImage="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       <FeatureGrid

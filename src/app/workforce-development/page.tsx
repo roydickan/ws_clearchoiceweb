@@ -155,6 +155,7 @@ export default function WorkforceDevelopmentPage() {
         subtitle="Workforce Development"
         description="Major OEMs like Toyota and Wolfspeed are actively seeking qualified U.S.-based suppliers. The manufacturers who invest in their workforce now will capture contracts that define their success for decades."
         ctaText="Explore Training Programs"
+        backgroundImage="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       <FeatureGrid

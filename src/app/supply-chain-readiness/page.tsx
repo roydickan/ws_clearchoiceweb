@@ -193,6 +193,7 @@ export default function SupplyChainReadinessPage() {
         subtitle="Supply Chain Readiness"
         description="Major manufacturers have billions to spend and aggressive timelines to meet. They need qualified tier 2 and tier 3 suppliers who can deliver quality, consistency, and compliance. Is that you?"
         ctaText="Assess My Readiness"
+        backgroundImage="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       <FeatureGrid

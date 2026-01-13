@@ -156,6 +156,7 @@ export default function SupplyChainOptimizationPage() {
         subtitle="Supply Chain Optimization for OEMs"
         description="Your manufacturing investment represents significant capital and strategic positioning. But the greatest risk isn't what you can see—it's the hidden constraints that will cap your growth when you need to scale most."
         ctaText="Schedule a Discovery Session"
+        backgroundImage="https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       {/* Intel Case Study */}

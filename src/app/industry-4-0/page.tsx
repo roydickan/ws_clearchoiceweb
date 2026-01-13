@@ -189,6 +189,7 @@ export default function Industry40Page() {
         subtitle="Industry 4.0 Adoption"
         description="Digital transformation isn't optional anymore. It's the price of admission to modern supply chains. The good news? You don't have to figure it out alone."
         ctaText="Get My Industry 4.0 Roadmap"
+        backgroundImage="https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
       <FeatureGrid
