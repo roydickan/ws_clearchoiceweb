@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navigation, siteConfig } from "@/lib/constants";
@@ -13,10 +14,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-slate-900">
-            Clear Choice<span className="text-orange-500">.</span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/ccmg-logo-450-red.png.webp"
+            alt="Clear Choice Services"
+            width={150}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
