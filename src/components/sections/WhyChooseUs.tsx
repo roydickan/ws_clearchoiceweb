@@ -1,46 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Handshake, MapPin, Shield } from "lucide-react";
 
 const features = [
   {
-    icon: Handshake,
-    title: "We're Partners, Not Consultants",
+    number: "01",
+    title: "Partners, not consultants",
     description:
-      "Most consultants hand you a report and disappear. We roll up our sleeves and work alongside your team until you're winning contracts.",
+      "We roll up our sleeves and work alongside your team until you're winning contracts.",
   },
   {
-    icon: MapPin,
-    title: "We Know NC Manufacturing",
+    number: "02",
+    title: "NC manufacturing experts",
     description:
-      "This isn't a side project for us. We're embedded in NC's manufacturing ecosystem—connected to OEMs, economic development agencies, and technology providers.",
+      "Embedded in NC's manufacturing ecosystem—connected to OEMs and technology providers.",
   },
   {
-    icon: Shield,
-    title: "We Guarantee Results",
+    number: "03",
+    title: "Guaranteed results",
     description:
-      "Our 10X ROI guarantee isn't marketing fluff. If we don't identify optimization opportunities worth 10 times your investment, you get a full refund.",
+      "10X ROI guarantee. If we don't deliver, you get a full refund.",
   },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-[#f5f5f7] py-32">
       <div className="container">
-        <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
-          >
-            Why Manufacturers Choose Clear Choice
-          </motion.h2>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-6 tracking-tight">
+            Why Clear Choice
+          </h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -50,13 +49,11 @@ export function WhyChooseUs() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-6">
-                <feature.icon className="h-8 w-8 text-red-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">
+              <p className="text-6xl font-semibold text-gray-200 mb-6">{feature.number}</p>
+              <h3 className="text-2xl font-semibold text-black mb-4 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-slate-600">{feature.description}</p>
+              <p className="text-gray-500 text-lg font-light leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}
         </div>

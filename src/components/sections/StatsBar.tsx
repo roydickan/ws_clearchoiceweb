@@ -1,6 +1,6 @@
 "use client";
 
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { stats } from "@/lib/constants";
 
@@ -31,7 +31,7 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="text-4xl md:text-5xl font-bold text-white">
+    <span ref={ref} className="text-5xl md:text-7xl font-semibold text-black tracking-tight">
       {count}
       {suffix}
     </span>
@@ -40,24 +40,37 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
 
 export function StatsBar() {
   return (
-    <section className="bg-slate-900 py-16 border-y border-slate-800">
+    <section className="bg-white py-32">
       <div className="container">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-            Proven Results That Speak for Themselves
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black mb-4 tracking-tight">
+            Proven Results
           </h2>
-          <p className="text-slate-400">
-            Average results achieved by our manufacturing partners
+          <p className="text-xl text-gray-500 font-light">
+            Average improvements achieved by our manufacturing partners
           </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="text-center"
+            >
               <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-              <p className="text-slate-400 mt-2 text-sm md:text-base">
+              <p className="text-gray-500 mt-3 text-base md:text-lg font-light">
                 {stat.label}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

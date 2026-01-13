@@ -3,56 +3,45 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Factory, Cpu, Zap } from "lucide-react";
 
 const opportunities = [
   {
-    company: "Toyota Battery Manufacturing NC (TBMNC)",
-    investment: "$13.9 billion",
-    description: "Actively building supplier networks for battery production",
-    icon: Factory,
+    company: "Toyota TBMNC",
+    investment: "$13.9B",
+    description: "Battery production supplier networks",
   },
   {
     company: "Wolfspeed",
-    investment: "$5 billion",
-    description: "Silicon carbide facility seeking qualified local suppliers",
-    icon: Cpu,
+    investment: "$5B",
+    description: "Silicon carbide facility suppliers",
   },
   {
-    company: "VinFast, Boom Supersonic & More",
-    investment: "Billions more",
-    description: "Creating unprecedented demand for tier 2 and tier 3 partners",
-    icon: Zap,
+    company: "VinFast & More",
+    investment: "$40B+",
+    description: "Tier 2 and tier 3 partnerships",
   },
 ];
 
 export function OpportunitySection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-black py-32">
       <div className="container">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
-          >
-            The Window Is Open. But It Won&apos;t Stay Open Forever.
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-slate-600"
-          >
-            Right now, major manufacturers are pouring billions into North Carolina.
-            These OEMs need suppliers who can meet their exacting standards.
-          </motion.p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 tracking-tight">
+            $60 billion opportunity.
+          </h2>
+          <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto font-light">
+            Major manufacturers are investing in North Carolina. They need qualified suppliers.
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           {opportunities.map((opp, index) => (
             <motion.div
               key={opp.company}
@@ -60,16 +49,13 @@ export function OpportunitySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-slate-50 rounded-xl p-6 border border-slate-200 hover:border-orange-300 hover:shadow-md transition-all duration-300"
+              className="bg-white/5 backdrop-blur rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mb-4">
-                <opp.icon className="h-6 w-6 text-red-700" />
-              </div>
-              <h3 className="font-semibold text-slate-900 mb-1">{opp.company}</h3>
-              <p className="text-2xl font-bold text-red-700 mb-2">
+              <p className="text-5xl md:text-6xl font-semibold text-white mb-2 tracking-tight">
                 {opp.investment}
               </p>
-              <p className="text-sm text-slate-600">{opp.description}</p>
+              <h3 className="text-xl font-medium text-white mb-2">{opp.company}</h3>
+              <p className="text-white/50 font-light">{opp.description}</p>
             </motion.div>
           ))}
         </div>
@@ -79,25 +65,19 @@ export function OpportunitySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-slate-900 rounded-2xl p-8 md:p-12 text-center"
+          className="text-center"
         >
-          <p className="text-slate-300 text-lg mb-4">
-            <span className="text-white font-semibold">The harsh reality?</span>{" "}
-            Most small and medium manufacturers aren&apos;t ready. They&apos;ll watch
-            from the sidelines as prepared competitors capture contracts that could
-            have been theirs.
-          </p>
-          <p className="text-2xl font-bold text-white mb-6">
-            You don&apos;t have to be one of them.
+          <p className="text-2xl md:text-3xl text-white/80 mb-8 font-light max-w-2xl mx-auto">
+            Most manufacturers aren&apos;t ready.<br />
+            <span className="text-white font-medium">You don&apos;t have to be one of them.</span>
           </p>
           <Button
             size="lg"
-            className="bg-red-600 hover:bg-red-700 text-white"
+            className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-14 text-lg font-medium"
             asChild
           >
             <Link href="/contact">
-              Find Out If You&apos;re OEM-Ready
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Check your OEM readiness
             </Link>
           </Button>
         </motion.div>

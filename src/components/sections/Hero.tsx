@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 interface HeroProps {
   headline: string;
@@ -21,97 +20,88 @@ export function Hero({
   backgroundImage = "/images/hero-bg.jpg",
 }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-      {/* Background with manufacturing image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Background with manufacturing image - Apple style subtle */}
       <div className="absolute inset-0">
         <img
           src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt="Manufacturing facility"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-900/90" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
       </div>
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Content - Apple centered style */}
+      <div className="container relative z-10 pt-20">
         <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 bg-red-600/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="container relative z-10 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl"
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-center max-w-4xl mx-auto"
         >
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-red-600/10 border border-red-600/20 mb-6"
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-red-500 text-lg md:text-xl font-medium tracking-wide mb-4"
           >
-            <span className="text-red-400 text-sm font-medium">
-              North Carolina&apos;s Manufacturing Transformation Partner
-            </span>
-          </motion.div>
+            Manufacturing Transformation
+          </motion.p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white mb-6 tracking-tight leading-[1.1]">
             {headline}
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
-            {subheadline}
+          <p className="text-xl md:text-2xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+            Transform your manufacturing operation for the $60B NC opportunity.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             <Button
               size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-lg"
+              className="bg-white text-black hover:bg-white/90 rounded-full px-8 h-14 text-lg font-medium"
               asChild
             >
               <Link href={primaryCTA.href}>
                 {primaryCTA.text}
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             {secondaryCTA && (
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white/30 bg-white/10 text-white hover:bg-white/20 px-8 py-6 text-lg"
+                variant="ghost"
+                className="text-blue-400 hover:text-blue-300 hover:bg-transparent rounded-full px-8 h-14 text-lg font-medium"
                 asChild
               >
-                <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
+                <Link href={secondaryCTA.href}>
+                  {secondaryCTA.text} →
+                </Link>
               </Button>
             )}
-          </div>
+          </motion.div>
         </motion.div>
       </div>
+
+      {/* Scroll indicator - Apple style */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2"
+        >
+          <motion.div className="w-1 h-2 bg-white/50 rounded-full" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
